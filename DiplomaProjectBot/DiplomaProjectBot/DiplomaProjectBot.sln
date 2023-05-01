@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.2017
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiplomaProjectBot", "DiplomaProjectBot\DiplomaProjectBot.csproj", "{976705DB-30F2-416B-BC57-20D80DFEF41F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{976705DB-30F2-416B-BC57-20D80DFEF41F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{976705DB-30F2-416B-BC57-20D80DFEF41F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{976705DB-30F2-416B-BC57-20D80DFEF41F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{976705DB-30F2-416B-BC57-20D80DFEF41F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6E0CC6C3-7F34-4289-80D4-EE744861111F}
+	EndGlobalSection
+EndGlobal

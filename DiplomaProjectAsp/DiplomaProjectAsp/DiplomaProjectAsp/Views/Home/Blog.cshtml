@@ -1,0 +1,42 @@
+﻿
+@{
+    Layout = "_Layout";
+    
+}
+
+@model Blog
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Blog</title>
+</head>
+<body>
+    @section footer{}
+
+    <div class="blog">
+
+        <b>@Model.Header</b>
+
+        <div class="line"></div>
+        
+        <p class="blogDataTime">@Model.Date.ToString("D")</p>
+       
+        <div class="blogContent">
+            <div>
+                <img class="blogImg" src="data:image;Base64,@Convert.ToBase64String(Model.Picture)" />
+            </div>
+
+            <p>@Model.Description</p>
+
+            <a href="/Home/Blogs">Назад</a>
+        </div>
+
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿@{Layout = "_Layout";}
+@model IEnumerable<Blog>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Blogs</title>
+</head>
+<body>
+    @section footer{ }
+
+    <div class="blogs">
+
+        <b>@ViewBag.Buttons[3]</b>
+
+        <div class="line"></div>
+        <div class="blogMargin">
+            @{
+                foreach (var e in Model)
+                {
+                    <a class="blogsList" href="/Home/Blog/@e.Id">
+                        <p class="dataTime">@e.Date.ToString("D")</p>
+                        <img class="blogsImg" src="data:image;base64,@Convert.ToBase64String(e.Picture)" />
+                        <b>@e.Header</b>
+                        <p class="shortTextBlogs">@e.Description</p>
+                    </a>
+                }
+
+            }
+
+        </div>
+
+    </div>
+
+    </body>
+</html>

@@ -1,0 +1,49 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="~/css/styles.css" rel="stylesheet"/>
+    <script src="~/js/VisibilityButton.js"></script>
+</head>
+<body>
+    <header>
+        <img class="icon" src="~/imeges/pngwing.com.png" />
+        <div class="menu">
+            <nav>
+                <ul class="menu">
+
+                    <li><a href="/Home/Index">@Html.ViewBag.Buttons[0]</a></li>
+                    <li><a href="/Home/Projects">@Html.ViewBag.Buttons[1]</a></li>
+                    <li><a href="/Home/Services">@Html.ViewBag.Buttons[2]</a></li>
+                    <li><a href="/Home/Blogs" >@Html.ViewBag.Buttons[3]</a></li>
+                    <li><a href="/Home/Contacts" >@Html.ViewBag.Buttons[4]</a></li>
+
+                </ul>
+            </nav>
+
+            <h2>"@Html.ViewBag.Call"</h2>
+        </div>
+
+        @RenderSection("footer")
+
+        <div class="navName">
+            <ul>
+  
+                @{ 
+                    foreach(var e in Html.ViewBag.NavInfoPage)
+                    {
+                <li><p>@e<p></li>
+                    }
+                
+                }
+                
+            </ul>
+        </div>
+    </header>
+
+    @RenderBody()
+
+    <div class="fuut"></div>
+</body>
+</html>

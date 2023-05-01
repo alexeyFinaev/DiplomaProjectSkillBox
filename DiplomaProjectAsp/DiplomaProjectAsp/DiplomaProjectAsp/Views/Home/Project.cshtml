@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout ="_Layout";
+}
+@model Project
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Project</title>
+    <link href="~/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+    @section footer{}
+    <div id="project">
+
+        <b>@Model.Header</b>
+        <img src="data:image;base64,@Convert.ToBase64String(Model.Picture)" />
+        <div class="line"></div>
+        <p>@Model.Text</p>
+
+    </div>
+
+</body>
+</html>

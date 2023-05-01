@@ -1,0 +1,60 @@
+﻿
+@{Layout = "_Layout";}
+@model TextHome
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="~/css/styles.css" rel="stylesheet" />
+    <script src="~/js/VisibilityButton.js"></script>
+    <title>Home</title>
+</head>
+<body>
+    @section footer{
+
+    <div class="homeHeader">
+        <b class="textheader_1">
+            @Model.Text_1
+
+        </b>
+        <br />
+        <b class="textheader_2">
+            @Model.Text_2
+        </b>
+
+        <a class="homeButton" href="#formButton">@Model.TextButton</a>
+    </div>
+        
+    }
+
+    <div class="form">
+        <h3><b>@Model.Text_3</b></h3>
+        <form asp-action="AddProposal" method="post">
+
+            <div class="nameForm">
+                <label>Имя</label><br />
+                <input id="nameUser" name="LastFirstName" type="text" oninput="OnChange()" />
+            </div>
+
+            <div class="emaleForm">
+                <label>E-mail</label><br />
+                <input id="emale" name="Email" type="email" oninput="OnChange()" />
+            </div>
+
+            <br />
+            <br />
+            <br />
+            <br />
+
+            <div class="textForm">
+                <label>Текст сообщения</label><br />
+                <input id="text" name="Text" type="text" oninput="OnChange()" />
+            </div>
+
+            <br />
+            <input id="formButton" class="submitForm" type="submit" />
+        </form>
+
+    </div>
+</body>
+</html>

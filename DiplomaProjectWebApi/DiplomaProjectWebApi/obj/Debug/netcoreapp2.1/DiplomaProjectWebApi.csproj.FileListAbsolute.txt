@@ -1,0 +1,14 @@
+C:\Users\user\Desktop\Диплом\DiplomaProjectWebApi\DiplomaProjectWebApi\bin\Debug\netcoreapp2.1\DiplomaProjectWebApi.deps.json
+C:\Users\user\Desktop\Диплом\DiplomaProjectWebApi\DiplomaProjectWebApi\bin\Debug\netcoreapp2.1\DiplomaProjectWebApi.runtimeconfig.json
+C:\Users\user\Desktop\Диплом\DiplomaProjectWebApi\DiplomaProjectWebApi\bin\Debug\netcoreapp2.1\DiplomaProjectWebApi.runtimeconfig.dev.json
+C:\Users\user\Desktop\Диплом\DiplomaProjectWebApi\DiplomaProjectWebApi\bin\Debug\netcoreapp2.1\DiplomaProjectWebApi.dll
+C:\Users\user\Desktop\Диплом\DiplomaProjectWebApi\DiplomaProjectWebApi\bin\Debug\netcoreapp2.1\DiplomaProjectWebApi.pdb
+C:\Users\user\Desktop\Диплом\DiplomaProjectWebApi\DiplomaProjectWebApi\obj\Debug\netcoreapp2.1\DiplomaProjectWebApi.csprojAssemblyReference.cache
+C:\Users\user\Desktop\Диплом\DiplomaProjectWebApi\DiplomaProjectWebApi\obj\Debug\netcoreapp2.1\DiplomaProjectWebApi.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Диплом\DiplomaProjectWebApi\DiplomaProjectWebApi\obj\Debug\netcoreapp2.1\DiplomaProjectWebApi.RazorAssemblyInfo.cache
+C:\Users\user\Desktop\Диплом\DiplomaProjectWebApi\DiplomaProjectWebApi\obj\Debug\netcoreapp2.1\DiplomaProjectWebApi.RazorAssemblyInfo.cs
+C:\Users\user\Desktop\Диплом\DiplomaProjectWebApi\DiplomaProjectWebApi\obj\Debug\netcoreapp2.1\DiplomaProjectWebApi.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\Диплом\DiplomaProjectWebApi\DiplomaProjectWebApi\obj\Debug\netcoreapp2.1\DiplomaProjectWebApi.AssemblyInfo.cs
+C:\Users\user\Desktop\Диплом\DiplomaProjectWebApi\DiplomaProjectWebApi\obj\Debug\netcoreapp2.1\DiplomaProjectWebApi.RazorTargetAssemblyInfo.cache
+C:\Users\user\Desktop\Диплом\DiplomaProjectWebApi\DiplomaProjectWebApi\obj\Debug\netcoreapp2.1\DiplomaProjectWebApi.dll
+C:\Users\user\Desktop\Диплом\DiplomaProjectWebApi\DiplomaProjectWebApi\obj\Debug\netcoreapp2.1\DiplomaProjectWebApi.pdb

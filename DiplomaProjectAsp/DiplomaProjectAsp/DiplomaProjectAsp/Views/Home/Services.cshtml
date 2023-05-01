@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = "_Layout";
+}
+@model IEnumerable<Service>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Services</title>
+</head>
+<body>
+    @section footer{}
+    <div class="serviceList">
+        <b>Что мы можем сделать</b>
+        <div class="line"></div>
+        <div>
+            @{
+                foreach (var e in Model)
+                {
+                    <details>
+                        <summary>@e.NameService</summary>
+                        <p>@e.Text</p>
+                    </details>
+
+                }
+            }
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+

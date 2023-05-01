@@ -1,0 +1,63 @@
+﻿
+@{
+    Layout = "_Layout";
+}
+@model IEnumerable<Contact>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Contacts</title>
+</head>
+<body>
+    @section footer{ }
+
+    <div class="contacts">
+        <b>@ViewBag.Buttons[4]</b>
+        <div class="line"></div>
+
+        <div class="contact">
+            @{
+                foreach (var e in Model)
+                {
+
+            <div class="soceale">
+                <p>@e.Text</p>
+                
+                <div>
+                    <div class="hover-text">
+                        <a href="@e.WhatsAppText"><img class="socialeImg" src="~/imeges/logo/logo_0000_Слой-1.png" /></a>
+                    </div>
+
+                    <div class="hover-text">
+                        <a href="@e.YoutobeText"><img class="socialeImg" src="~/imeges/logo/logo_0001_Слой-2.png" /></a>
+</div>
+
+                    <div class="hover-text">
+                        <a href="@e.TwitterText"><img class="socialeImg" src="~/imeges/logo/logo_0004_Слой-5.png" /></a>
+</div>
+
+                    <div class="hover-text">
+                        <a href="@e.FaceBookText"><img class="socialeImg" src="~/imeges/logo/logo_0007_Слой-8.png" /></a>
+</div>
+
+                    <div class="hover-text">
+                        <a href="@e.InstaText"><img class="socialeImg" src="~/imeges/logo/logo_0009_Слой-10.png" /></a>
+</div>
+
+                </div>
+
+            </div>
+
+            <div class="map">
+                <img src="data:image;base64,@Convert.ToBase64String(e.Picture)" />
+            </div>
+            
+                }
+            }
+        </div>
+    </div>
+</body>
+</html>
