@@ -1,13 +1,188 @@
- Для функцонирования приложений вначале 
-необходимо запустить WebApi приложение,
-которое запустит приложение имитации
-базы данных.
- Для работы с Telegramm ботом необходимо
+ Для работвы с приложениями необходимо установить 
+среду разрботки VisualStudio 2017 или более позднюю.
+При установке требуется установить следующие компoненты:
+	Средства разработки классических приложений.
+	Средства разработкидля платформы .NetFramework 4.6.1
+	.Net Core 2.1 development tools
+	Sql Server Express 2016 LocalDb
+
+ Во всех приложениях требуется установить стороннюю библиотеку:
+NewtonSoft.Json version 13.0.3 или выше, для работы с файлами 
+формата .json 
+
+ В приложении DiplomaProjectBot для требуется установить стороннюю
+библиотеку:Telegram.Bot version 13.1.0, для более удобной работы с
+Телеграмм ботом.
+
+Для работы с Telegramm ботом необходимо
 прописать токен который находится в исходном
 проекте в папке:
 DiplomaProjectBot\Presenter.cs
 
- Для работы с консольным приложением 
-необходимо ввести:
-		Login:admin
-		Password:admin
+Для функцонирования приложений вначале 
+необходимо запустить WebApi приложение,
+которое запустит приложение имитации
+базы данных.
+
+ Логин и пароль по умолчанию:
+			Login:admin
+			Password:admin
+
+
+
+	ОПИСАНИЕ Api функций:
+
+token="localhost:44346"-номер хоста
+
+https://{token}/api/values --->Get-запрос, возвращает список элементов навигации;
+
+https://{token}/api/values/updatebutton/buttonName/{buttonName}/newName/{newName} --->Post-запрос,
+		изменяет название элемента навигации, где {buttonName}-старое
+		название, а {newName}-новое название
+
+
+https://{token}/api/values/addproposal  --->Post-запрос,
+		добавляет новую заявку, при отправке запроса необходимо
+		отравить экземпляр класса заявки в формате Json;
+
+		Пример запроса:		 HttpClient.PostAsync(requestUri: $"https://{token}/api/values/addproposal", content:
+                		         new StringContent(JsonConvert.SerializeObject({экземпляр класса заявки}), Encoding.UTF8,
+                		         mediaType: "application/json"));
+
+
+
+https://{token}/api/values/getproposals  --->Get-запрос,возвращает список всех заявок;
+
+
+https://{token}/api/values/getproposalsstatus/status/{status} --->Get-запрос,
+		возвращает список заявок указаного статуса; {status}-строчное название статуса;
+
+
+https://{token}/api/values/getdateproposals/startdate/{startdate}/enddate/{enddate} --->Get-запрос,
+		возвращает список заявок за определенный переиод времени,
+	        где {startdate} и {enddate}-начальная и конечная дата;
+
+https://{token}/api/values/updateproposal/id/{id}/status/{status} --->Post-запрос,
+		изменяет статус заявки, необходимо отправить пустой запрос, где
+		{id}-id заявки,{status}-строковое значение нового статуса;
+
+
+
+https://{token}/api/values/getprojects --->Get-запрос,возвращает список проектов;
+
+https://{token}/api/values/addproject --->Post-запрос,
+		 добавляет новый проект, при отправке запроса необходимо
+		 отравить экземпляр класса проекта в формате Json;
+
+		 Пример запроса:		 HttpClient.PostAsync(requestUri: $"https://{token}/api/values/addproject", content:
+                		         	 new StringContent(JsonConvert.SerializeObject({экземпляр класса проекта}), Encoding.UTF8,
+                		        	 mediaType: "application/json"));
+
+
+
+https://{token}/api/values/updateproject/id/{id} --->Post-запрос,
+		 изменняет проект
+		 где, {id}-id проекта который нужно изменить,
+		 при отправке запроса необходимо
+		 отравить экземпляр класса проекта в формате Json;
+
+		 Пример запроса:		 HttpClient.PostAsync(requestUri: $"https://{token}/api/values/updateproject/id/{id}", content:
+                		         	 new StringContent(JsonConvert.SerializeObject({экземпляр класса проекта}), Encoding.UTF8,
+                		        	 mediaType: "application/json"));
+
+
+
+https://{token}/api/values/deleteproject/id/{id} --->Post-запрос,
+		удаляет проект, где {id}-id проекта, необходимо отправить пустой пост-запрос;
+		
+
+https://{token}/api/values/getservices  --->Get-запрос,возвращает список услуг;
+
+
+
+https://{token}/api/values/addservise --->Post-запрос,
+		 добавляет новую услугу, при отправке запроса необходимо
+		 отравить экземпляр класса услг формате Json;
+
+		 Пример запроса:		 HttpClient.PostAsync(requestUri: $"https://{token}/api/values/addservise", content:
+                		         	 new StringContent(JsonConvert.SerializeObject({экземпляр класса услуг}), Encoding.UTF8,
+                		        	 mediaType: "application/json"));
+
+
+
+https://{token}/api/values/updateservise/id/{id} --->Post-запрос,
+		 изменняет услугу
+		 где, {id}-id услуги которую нужно изменить,
+		 при отправке запроса необходимо
+		 отравить экземпляр класса услуги в формате Json;
+
+		 Пример запроса:		 HttpClient.PostAsync(requestUri: $"https://{token}/api/values/updateservise/id/{id}", content:
+                		         	 new StringContent(JsonConvert.SerializeObject({экземпляр класса услуги}), Encoding.UTF8,
+                		        	 mediaType: "application/json"));
+
+
+
+
+
+https://{token}/api/values/deleteservice/id/{id}} --->Post-запрос,
+		удаляет услугу, где {id}-id услуги, необходимо отправить пустой пост-запрос;
+
+
+https://{token}/api/values/getblogs  --->Get-запрос,возвращает список постов;
+
+
+
+https://{token}/api/values/addblog --->Post-запрос,
+		 добавляет новый пост, при отправке запроса необходимо
+		 отравить экземпляр класса поста формате Json;
+
+		 Пример запроса:		 HttpClient.PostAsync(requestUri: $"https://{token}/api/values/addblog", content:
+                		         	 new StringContent(JsonConvert.SerializeObject({экземпляр класса поста}), Encoding.UTF8,
+                		        	 mediaType: "application/json"));
+
+
+
+
+https://{token}/api/values/deleteblog/{id} --->Post-запрос,
+		удаляет пост, где {id}-id поста, необходимо отправить пустой пост-запрос;
+		
+
+
+
+https://{token}/api/values/updateblog/{id} --->Post-запрос,
+		 изменняет пост
+		 где, {id}-id услуги которую нужно изменить,
+		 при отправке запроса необходимо
+		 отравить экземпляр класса поста в формате Json;
+
+		 Пример запроса:		 HttpClient.PostAsync(requestUri: $"https://{token}/api/values/updateblog/{id}", content:
+                		         	 new StringContent(JsonConvert.SerializeObject({экземпляр класса поста}), Encoding.UTF8,
+                		        	 mediaType: "application/json"));
+
+
+
+
+https://{token}/api/values/getcontacts  --->Get-запрос,возвращает список контактов;
+
+
+https://{token}/api/values/updatecontact/id/{id}--->Post-запрос,
+		 изменняет контакты
+		 где, {id}-id контакта который нужно изменить,
+		 при отправке запроса необходимо
+		 отравить экземпляр класса поста в формате Json;
+
+		 Пример запроса:		 HttpClient.PostAsync(requestUri: $"https://{token}/api/values/updatecontact/id/{id}", content:
+                		         	 new StringContent(JsonConvert.SerializeObject({экземпляр класса контакта}), Encoding.UTF8,
+                		        	 mediaType: "application/json"));
+
+
+
+
+
+
+
+
+
+
+
+
